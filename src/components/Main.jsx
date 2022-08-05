@@ -1,46 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import Welcome from "./Welcome";
 import Login from "./Login";
 import Register from "./Register";
 import "./Welcome.css";
 
 const Main = () => {
-  const cards = document.querySelectorAll(".card");
-  const btns = document.querySelectorAll(".js-btn");
+  const [isShow, setIsShow] = useState("welcome");
+  // const [bodyname, setBodyname] = useState("");
+  // const [bgcolor, setBgcolor] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
 
-  btns.forEach((btn) => {
-    btn.addEventListener("click", on_btn_click, true);
-    btn.addEventListener("touch", on_btn_click, true);
-  });
-
-  function on_btn_click(e) {
-    const nextID = e.currentTarget.getAttribute("data-target");
-    const next = document.getElementById(nextID);
-    if (!next) return;
-    bg_change(nextID);
-    view_change(next);
-    return false;
-  }
-
-  /* Add class to the body */
-  function bg_change(next) {
-    document.body.className = "";
-    document.body.classList.add("is-" + next);
-  }
-
-  /* Add class to a card */
-  function view_change(next) {
+  const handleClick = (e) => {
+    console.log(isShow);
+    setIsShow(e.currentTarget.getAttribute("data-target"));
+    console.log(isShow);
+    if (!isShow) return;
+    const cards = document.querySelectorAll(".card");
     cards.forEach((card) => {
       card.classList.remove("is-show");
     });
-    next.classList.add("is-show");
-  }
+    document.querySelector(isShow).add("is-" + isShow);
+    document.body.className = "";
+  };
 
   return (
     <div className="card-wrap">
-      <Welcome />
-      <Register />
-      <Login />
+      <Welcome isShow={isShow} setIsShow={setIsShow} handleClick={handleClick} />
+      <Register isShow={isShow} setIsShow={setIsShow} handleClick={handleClick} />
+      <Login isShow={isShow} setIsShow={setIsShow} handleClick={handleClick} />
     </div>
   );
 };

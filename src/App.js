@@ -1,8 +1,16 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./components/Main";
-import "./components/Welcome.css";
 
 function App() {
-  return <Main />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/auth" element={<Main />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

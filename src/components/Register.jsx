@@ -1,41 +1,10 @@
 import React from "react";
 import "./Welcome.css";
 
-const Register = () => {
-  const cards = document.querySelectorAll(".card");
-
-  const btns = document.querySelectorAll(".js-btn");
-  btns.forEach((btn) => {
-    btn.addEventListener("click", on_btn_click, true);
-    btn.addEventListener("touch", on_btn_click, true);
-  });
-
-  function on_btn_click(e) {
-    //console.log(e.currentTarget);
-    const nextID = e.currentTarget.getAttribute("data-target");
-    const next = document.getElementById(nextID);
-    if (!next) return;
-    bg_change(nextID);
-    view_change(next);
-    return false;
-  }
-
-  /* Add class to the body */
-  function bg_change(next) {
-    //alert(document.body.classList);
-    document.body.className = "";
-    document.body.classList.add("is-" + next);
-  }
-
-  /* Add class to a card */
-  function view_change(next) {
-    cards.forEach((card) => {
-      card.classList.remove("is-show");
-    });
-    next.classList.add("is-show");
-  }
+const Register = (props) => {
+  const { isShow, handleClick } = props;
   return (
-    <div className="card border-0 shadow card--register" id="register">
+    <div className={`card border-0 shadow card--register ${isShow === "register" ? "is-show" : ""} `} id="register">
       <div className="card-body">
         <h2 className="card-title">Create Account</h2>
         <p className="card-text">
@@ -55,7 +24,7 @@ const Register = () => {
           </button>
         </form>
       </div>
-      <button className="btn btn-back js-btn fas fa-angle-left" data-target="welcome"></button>
+      <button className="btn btn-back js-btn fas fa-angle-left" onClick={(e) => handleClick(e)} data-target="welcome"></button>
     </div>
   );
 };
