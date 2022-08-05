@@ -1,7 +1,10 @@
 import React from "react";
+import Welcome from "./Welcome";
+import Login from "./Login";
+import Register from "./Register";
 import "./Welcome.css";
 
-const Login = () => {
+const Main = () => {
   const cards = document.querySelectorAll(".card");
   const btns = document.querySelectorAll(".js-btn");
 
@@ -34,28 +37,12 @@ const Login = () => {
   }
 
   return (
-    <div className="card border-0 shadow card--login" id="login">
-      <div className="card-body">
-        <h2 className="card-title">Welcome Back!</h2>
-        <p>
-          To keep connected with us
-          <br />
-          please login with your personal info
-        </p>
-        <p>use your account</p>
-        <form>
-          <div className="form-group">
-            <input className="form-control" type="email" placeholder="Email" required="required" />
-          </div>
-          <div className="form-group">
-            <input className="form-control" type="password" placeholder="Password" required="required" />
-          </div>
-          <button className="btn btn-lg">LOGIN</button>
-        </form>
-      </div>
-      <button className="btn btn-back js-btn fas fa-angle-left" data-target="welcome"></button>
+    <div className="card-wrap">
+      <Welcome />
+      <Register />
+      <Login />
     </div>
   );
 };
 
-export default Login;
+export default Main;
