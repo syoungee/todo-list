@@ -20,7 +20,6 @@ const Main = () => {
     cards.forEach((card) => {
       card.classList.remove("is-show");
     });
-    //document.querySelector(isShow).add("is-" + isShow);
     document.body.className = "";
   };
 
