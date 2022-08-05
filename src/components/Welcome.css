@@ -81,6 +81,7 @@ body {
   border-radius: 20px;
   border: 2px solid transparent;
 }
+
 .btn.btn-back {
   position: absolute;
   top: 0;
@@ -93,6 +94,14 @@ body {
 }
 .btn.btn-back:hover {
   border: 0 !important;
+}
+
+.btn.btn-lg.btn-off {
+  background-color: #808080;
+}
+
+.btn.btn-lg.btn-off:hover {
+  background-color: #808080;
 }
 
 .form-control {

@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Welcome.css";
 
 const Register = (props) => {
   const { isShow, handleClick } = props;
+  const [userInfo, setUserInfo] = useState({ email: "", password: "" });
+  const [btnOn, setBtnOn] = useState(false);
+
+  // set email & password
+  const onChange = (e) => {
+    setUserInfo({ ...userInfo, [e.target.type]: e.target.value });
+    if (canRegister(userInfo)) setBtnOn(true);
+    else setBtnOn(false);
+  };
+
+  // validation check
+  const canRegister = (userInfo) => {
+    if (!userInfo.email || !userInfo.password) return false;
+    const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+    if (regEmail.test(userInfo.email) === true && userInfo.password.length >= 8) {
+      return true;
+    }
+    return false;
+  };
+
   return (
     <div className={`card border-0 shadow card--register ${isShow === "register" ? "is-show" : ""} `} id="register">
       <div className="card-body">
@@ -14,12 +34,12 @@ const Register = (props) => {
         </p>
         <form>
           <div className="form-group">
-            <input className="form-control" type="email" placeholder="Email" required="required" />
+            <input className="form-control" onChange={onChange} type="email" placeholder="Email" required="required" />
           </div>
           <div className="form-group">
-            <input className="form-control" type="password" placeholder="Password" required="required" />
+            <input className="form-control" onChange={onChange} type="password" placeholder="Password" required="required" />
           </div>
-          <button className="btn btn-lg" data-target="welcome">
+          <button disabled={!btnOn} className={`btn btn-lg ${btnOn ? "btn-on" : "btn-off"}`} id="register">
             REGISTER
           </button>
         </form>
