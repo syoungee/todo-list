@@ -1,10 +1,11 @@
 body {
+  z-index: 1;
   display: flex;
   height: 100vh;
   min-height: 35rem;
   align-items: center;
   justify-content: center;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .card {
@@ -105,23 +106,23 @@ body {
 }
 
 .form-control {
-  font-family: "Handle", cursive;
+  font-family: "Handle";
 }
 
 .form-control::-moz-placeholder {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
   letter-spacing: 0.1em;
   font-size: 0.9rem;
 }
 
 .form-control:-ms-input-placeholder {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
   letter-spacing: 0.1em;
   font-size: 0.9rem;
 }
 
 .form-control::placeholder {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
   letter-spacing: 0.1em;
   font-size: 0.9rem;
 }
@@ -172,7 +173,7 @@ body {
   box-shadow: 0 0 0 0.2rem rgba(238, 156, 167, 0.25);
 }
 .card--register .form-control {
-  color: #ee9ca7;
+  color: black;
   border-color: rgba(238, 156, 167, 0.25);
 }
 .card--register .form-control:focus {
@@ -197,7 +198,7 @@ body {
   box-shadow: 0 0 0 0.2rem rgba(167, 191, 232, 0.25);
 }
 .card--login .form-control {
-  color: #a7bfe8;
+  color: black;
   border-color: rgba(167, 191, 232, 0.25);
 }
 .card--login .form-control:focus {

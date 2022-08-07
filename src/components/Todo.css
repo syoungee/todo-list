@@ -9,7 +9,8 @@
   --font: "DM Sans", sans-serif;
 }
 
-body {
+/* body {
+  z-index: 0;
   background-image: linear-gradient(
     102.7deg,
     rgba(253, 218, 255, 1) 8.2%,
@@ -26,7 +27,7 @@ body {
   padding: 20px;
   height: 100vh;
   overflow: hidden;
-}
+} */
 
 .app {
   width: 400px;
