@@ -12,7 +12,7 @@ import axios from "axios";
 export const login = async (data) => {
   try {
     const response = await axios.post("http://localhost:8080/users/login", data);
-    console.log(response); // message, token
+    // console.log(response); // message, token
     window.localStorage.setItem("token", response.data.token);
     return response;
   } catch (error) {
@@ -31,7 +31,7 @@ export const signUp = async (data) => {
   console.log("signUp함수 실행");
   try {
     const response = await axios.post("http://localhost:8080/users/create", data);
-    console.log(response); // message, token
+    //console.log(response); // message, token
     return response;
   } catch (error) {
     console.error(error);
@@ -41,15 +41,14 @@ export const signUp = async (data) => {
 // TODO APIS(CRUD) - 인증이 필요합니다
 
 export const getTodos = async () => {
-  console.log("getTodos 실행");
   const headers = {
     "Content-Type": "application/json",
     Authorization: window.localStorage.getItem("token"),
   };
   try {
     const response = await axios.get("http://localhost:8080/todos", { headers: headers });
-    console.log(response.data); // data
-    return response.data;
+    //console.log(response.data); // data
+    return response;
   } catch (error) {
     console.error(error);
   }
