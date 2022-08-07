@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "./Todo.css";
 import { getTodos } from "../api";
+import { useNavigate } from "react-router-dom";
+import "./Todo.css";
 // import todoDatas from "../dummy-data.json";
 // dummy-data 필요 시 주석 제거
 
 const Todo = () => {
+  const navigate = useNavigate();
   const [items, setItems] = useState(null);
   useEffect(() => {
     getTodos().then((res) => {
@@ -28,7 +30,12 @@ const Todo = () => {
       <div className={`task-item`} key={index}>
         <input className={`task-status`} type="checkbox" value={index} onChange={(e) => checkValue(e)}></input>
         <div className={`task-name`}>{item.title}</div>
-        <button className="task-detail"></button>
+        <button
+          className="task-detail"
+          onClick={() => {
+            navigate(`/todo/${index}`, { state:{id: item.id, index:index} });
+          }}
+        ></button>
         <button className="task-delete"></button>
       </div>
     ));
@@ -40,7 +47,10 @@ const Todo = () => {
         <div className="task-header-title">TODO LIST</div>
         <div className="task-tools"></div>
       </div>
-      <div className="task-tools">{items?.length} tasks</div>
+      <div className="task-body">
+        <div className="task-tools">{items?.length} tasks</div>
+        <div className="task-filter is-active">add new tasks!</div>
+      </div>
       <div className="task-list">{todoItems()}</div>
     </div>
   );

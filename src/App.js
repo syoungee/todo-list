@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Main from "./components/Main";
 import Todo from "./components/Todo";
+import TodoDetail from "./components/TodoDetail";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Route path="/" element={<Navigate replace to="/auth" />} />
         <Route path="/auth" element={<Main />} />
         <Route path="/todo" element={<Todo />} />
+        <Route path="/todo/:id" element={<TodoDetail/>} />
       </Routes>
     </BrowserRouter>
   );
