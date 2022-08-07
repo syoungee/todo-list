@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 // Auth APIS
 
@@ -12,7 +13,6 @@ import axios from "axios";
 export const login = async (data) => {
   try {
     const response = await axios.post("http://localhost:8080/users/login", data);
-    // console.log(response); // message, token
     return response;
   } catch (error) {
     console.error(error);
@@ -30,14 +30,13 @@ export const signUp = async (data) => {
   console.log("signUp함수 실행");
   try {
     const response = await axios.post("http://localhost:8080/users/create", data);
-    //console.log(response); // message, token
     return response;
   } catch (error) {
     console.error(error);
   }
 };
 
-// TODO APIS(CRUD) - 인증이 필요합니다
+// TODO APIS(CRUD) - 인증 필요
 
 export const getTodos = async () => {
   const headers = {
@@ -46,70 +45,47 @@ export const getTodos = async () => {
   };
   try {
     const response = await axios.get("http://localhost:8080/todos", { headers: headers });
-    //console.log(response.data); // data
     return response;
   } catch (error) {
     console.error(error);
   }
 };
 
-export const getTodoById = async (authToken) => {
+export const getTodoById = async (id) => {
   const headers = {
     "Content-Type": "application/json",
-    Authorization: authToken,
+    authorization: localStorage.getItem("token"),
   };
   try {
-    const response = await axios.get("localhost:8080/getTodoById/:id", {
-      headers: headers, // headers에 headers 객체 전달
-    });
-    console.log(response); // data
+    const response = await axios.get(`http://localhost:8080/todos/${id}`, { headers: headers });
     return response;
   } catch (error) {
     console.error(error);
   }
 };
 
-export const createTodo = async (authToken) => {
-  const headers = {
-    "Content-Type": "application/json",
-    Authorization: authToken,
-  };
+export const createTodo = async (data) => {
   try {
-    const response = await axios.post("localhost:8080/todos", {
-      headers: headers, // headers에 headers 객체 전달
-    });
-    console.log(response); // data
+    const response = await axios.post("localhost:8080/todos", data);
+    console.log(response);
   } catch (error) {
     console.error(error);
   }
 };
 
-export const updateTodo = async (data, authToken) => {
-  const headers = {
-    "Content-Type": "application/json",
-    Authorization: authToken,
-  };
+export const updateTodo = async (data) => {
   try {
-    const response = await axios.put("localhost:8080/todos/:id", data, {
-      headers: headers, // headers에 headers 객체 전달
-    });
-    console.log(response); // data
+    const response = await axios.put("localhost:8080/todos/${id}", data);
+    console.log(response);
   } catch (error) {
     console.error(error);
   }
 };
 
-export const deleteTodo = async (data, authToken) => {
-  const headers = {
-    "Content-Type": "application/json",
-    Authorization: authToken,
-  };
-
+export const deleteTodo = async (data) => {
   try {
-    const response = await axios.delete("localhost:8080/todos/:id", {
-      headers: headers, // headers에 headers 객체 전달
-    });
-    console.log(response); // data
+    const response = await axios.delete("localhost:8080/todos/:id", data);
+    console.log(response);
   } catch (error) {
     console.error(error);
   }
