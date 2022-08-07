@@ -1,0 +1,167 @@
+{
+  "todos": [
+    {
+      "title": "아침 8시에 기상하기",
+      "content": "기상하지 못하면 벌금 500원",
+      "id": "aWqyv38MBxOYUWYI3_Xt_",
+      "createdAt": "2022-08-05T07:48:18.955Z",
+      "updatedAt": "2022-08-05T07:48:18.955Z"
+    },
+    {
+      "title": "아침 8시 반에 아침 먹기",
+      "content": "아침을 배부르게 먹자:)",
+      "id": "W3qK984wZ_RvVVGTBAWSC",
+      "createdAt": "2022-08-05T07:48:41.735Z",
+      "updatedAt": "2022-08-05T07:48:41.735Z"
+    },
+    {
+      "title": "아침 9시에 산책가기",
+      "content": "강아지는 없지만 산책은 해야지!",
+      "id": "vgYc2UeZeq-twWmo1aicR",
+      "createdAt": "2022-08-05T07:49:02.607Z",
+      "updatedAt": "2022-08-05T07:49:02.607Z"
+    },
+    {
+      "title": "아침 10시에 코딩하기",
+      "content": "저는 아침에 집중력이 좋은 편이더라구요?",
+      "id": "gYwZ7XbJ9u9zCti76vSJH",
+      "createdAt": "2022-08-05T07:49:30.235Z",
+      "updatedAt": "2022-08-05T07:49:30.235Z"
+    },
+    {
+      "title": "12시에 점심 먹기",
+      "content": "점심시간은 늘상 기대된다!",
+      "id": "AkNv_gWgF_32mD-xSMcoc",
+      "createdAt": "2022-08-05T07:49:50.208Z",
+      "updatedAt": "2022-08-05T07:49:50.208Z"
+    },
+    {
+      "title": "오후 1시에 낮잠 자기",
+      "content": "오늘은 자각몽을 꿀 수 있을까?",
+      "id": "EEHvp8WeHmCnhdyfv6OMO",
+      "createdAt": "2022-08-05T07:50:12.421Z",
+      "updatedAt": "2022-08-05T07:50:12.421Z"
+    },
+    {
+      "title": "오후 2시에 간식 먹기",
+      "content": "난 요새 버블티가 그렇게 좋더라",
+      "id": "07KeLiPkSn1cKeyB6rKxQ",
+      "createdAt": "2022-08-05T07:50:31.377Z",
+      "updatedAt": "2022-08-05T07:50:31.377Z"
+    },
+    {
+      "title": "오후 3시에 행복하기",
+      "content": "피곤한 시간이지만 그만큼 하루를 열심히 보내고 있다는 증거인걸?",
+      "id": "bYuKR6b9abm6BjW5ZlYIq",
+      "createdAt": "2022-08-05T07:50:59.577Z",
+      "updatedAt": "2022-08-05T07:50:59.577Z"
+    },
+    {
+      "title": "오후 5시에 퇴근 준비하기",
+      "content": "늘상 5시 반에 퇴근을 해야지! 아침에 일찍 출근하고 일찍 퇴근하는 바른 코린이 인생~",
+      "id": "g7isxt8tMALEWR4L9m2rG",
+      "createdAt": "2022-08-05T07:51:40.423Z",
+      "updatedAt": "2022-08-05T07:51:40.423Z"
+    },
+    {
+      "title": "오후 7시에 클라이밍 가기",
+      "content": "클라이밍은 못 참지....",
+      "id": "f0zK5iXSRGG9PpKwajRxY",
+      "createdAt": "2022-08-05T07:52:01.923Z",
+      "updatedAt": "2022-08-05T07:52:01.923Z"
+    },
+    {
+      "title": "오후 10시에 집가서 녹초되기",
+      "content": "오늘 하루도 즐거웠다. 다른 건 몰라도 세수는 꼭 하고 자ㅠㅠ",
+      "id": "OfwZoc_N3iuM712X1SiEF",
+      "createdAt": "2022-08-05T07:52:25.806Z",
+      "updatedAt": "2022-08-05T07:52:25.806Z"
+    }
+  ],
+  "users": [
+    {
+      "email": "sunyoungah69@gmail.com",
+      "password": "123456789",
+      "id": "yQHnehP1uJPvKXlv4pHUh",
+      "createdAt": "2022-08-05T07:45:37.307Z",
+      "updatedAt": "2022-08-05T07:45:37.307Z"
+    },
+    {
+      "email": "hello@gmail.com",
+      "password": "12341234123",
+      "id": "adv4nNl7L-uFUM5sGdbkW",
+      "createdAt": "2022-08-05T12:57:14.037Z",
+      "updatedAt": "2022-08-05T12:57:14.037Z"
+    },
+    {
+      "email": "test11111@test.com",
+      "password": "Test1234!11",
+      "id": "ruc2n3vj1HPNMYxX8GThM",
+      "createdAt": "2022-08-05T13:03:07.159Z",
+      "updatedAt": "2022-08-05T13:03:07.159Z"
+    },
+    {
+      "email": "test222222@test.com",
+      "password": "Test1234!2222",
+      "id": "LGp8i6rnz93NoGKWfWxkS",
+      "createdAt": "2022-08-05T13:03:19.017Z",
+      "updatedAt": "2022-08-05T13:03:19.017Z"
+    },
+    {
+      "email": "test123@test.com",
+      "password": "Test1234!123",
+      "id": "Ks1euRdROQqKpI7ZuDB2O",
+      "createdAt": "2022-08-05T13:20:20.008Z",
+      "updatedAt": "2022-08-05T13:20:20.008Z"
+    },
+    {
+      "email": "test123123@test.com",
+      "password": "Test1234!123",
+      "id": "EmdKecM2T5Scj_gqdppVc",
+      "createdAt": "2022-08-05T13:20:25.565Z",
+      "updatedAt": "2022-08-05T13:20:25.565Z"
+    },
+    {
+      "email": "test123123132@test.com",
+      "password": "Test1234!123123132",
+      "id": "Wdn4I7WtqMRjoWWKw4mXS",
+      "createdAt": "2022-08-05T13:20:31.107Z",
+      "updatedAt": "2022-08-05T13:20:31.107Z"
+    },
+    {
+      "email": "tes111t@test.com",
+      "password": "Test1234!1111",
+      "id": "fLR9f0beCljRzNpYiQzBt",
+      "createdAt": "2022-08-05T13:22:32.410Z",
+      "updatedAt": "2022-08-05T13:22:32.410Z"
+    },
+    {
+      "email": "test12312@test.com",
+      "password": "Test1234!123123",
+      "id": "nkpEhKkHAKWWxOMx0nYw_",
+      "createdAt": "2022-08-05T13:22:58.513Z",
+      "updatedAt": "2022-08-05T13:22:58.513Z"
+    },
+    {
+      "email": "test12312312@test.com",
+      "password": "Test123123123123",
+      "id": "CBcByq51X8Yym2JMhvU39",
+      "createdAt": "2022-08-05T13:26:20.966Z",
+      "updatedAt": "2022-08-05T13:26:20.966Z"
+    },
+    {
+      "email": "test1111@test.com",
+      "password": "Test1234!11111111",
+      "id": "FWm0kkKkRwVGPJB3QGVNv",
+      "createdAt": "2022-08-05T13:27:27.619Z",
+      "updatedAt": "2022-08-05T13:27:27.619Z"
+    },
+    {
+      "email": "test0000@test.com",
+      "password": "Test1230004!",
+      "id": "KYnQJ8gZcRRZTRJMUDXtT",
+      "createdAt": "2022-08-05T13:27:41.180Z",
+      "updatedAt": "2022-08-05T13:27:41.180Z"
+    }
+  ]
+}
