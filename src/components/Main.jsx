@@ -6,10 +6,6 @@ import "./Welcome.css";
 
 const Main = () => {
   const [isShow, setIsShow] = useState("welcome");
-  // const [bodyname, setBodyname] = useState("");
-  // const [bgcolor, setBgcolor] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
 
   const handleClick = (e) => {
     console.log(isShow);
