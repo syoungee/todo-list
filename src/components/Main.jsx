@@ -8,9 +8,7 @@ const Main = () => {
   const [isShow, setIsShow] = useState("welcome");
 
   const handleClick = (e) => {
-    console.log(isShow);
     setIsShow(e.currentTarget.getAttribute("data-target"));
-    console.log(isShow);
     if (!isShow) return;
     const cards = document.querySelectorAll(".card");
     cards.forEach((card) => {

@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Welcome.css";
 import { login } from "../api.js";
-import { useAuthState } from "../context/AuthContext";
+import "./Welcome.css";
 
 const Login = (props) => {
   const navigate = useNavigate();
   const { isShow, handleClick } = props;
-  const { setLogin } = useAuthState();
   const [userInfo, setUserInfo] = useState({ email: "", password: "" });
   const [btnOn, setBtnOn] = useState(false);
 
@@ -34,7 +32,8 @@ const Login = (props) => {
     login(userInfo).then((res) => {
       console.log(res.status, res.data.message);
       if (res.status === 200) {
-        setLogin();
+        window.localStorage.setItem("isLoggedIn", true);
+        window.localStorage.setItem("token", res.data.token);
         navigate("/todo");
       } else {
         console.log(res.status, res.data.message);

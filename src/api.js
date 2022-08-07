@@ -13,7 +13,6 @@ export const login = async (data) => {
   try {
     const response = await axios.post("http://localhost:8080/users/login", data);
     // console.log(response); // message, token
-    window.localStorage.setItem("token", response.data.token);
     return response;
   } catch (error) {
     console.error(error);

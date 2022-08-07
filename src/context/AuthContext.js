@@ -1,4 +1,5 @@
 import React from "react";
+// local storage에 로그인 정보 저장
 
 const defaultContext = {
   isLoggedIn: false,
@@ -11,12 +12,13 @@ const AuthContextProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = React.useState(!!localStorage.getItem("isLoggedIn"));
 
   const setLogin = () => {
-    localStorage.setItem("isLoggedIn", true);
+    console.log("setLogin");
+    window.localStorage.setItem("isLoggedIn", true);
     setIsLoggedIn(true);
   };
 
   const setLogout = () => {
-    localStorage.removeItem("isLoggedIn");
+    window.localStorage.removeItem("isLoggedIn");
     setIsLoggedIn(null);
   };
 

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Todo.css";
-// import todoDatas from "../dummy-data.json";
 import { getTodos } from "../api";
+// import todoDatas from "../dummy-data.json";
+// dummy-data 필요 시 주석 제거
 
 const Todo = () => {
   const [items, setItems] = useState(null);
