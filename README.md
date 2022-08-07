@@ -12,7 +12,7 @@
 
 ## 📒 Project
 
-개인으로 진행한 프로젝트입니다😎
+개인으로 진행한 프로젝트입니다😎 <br/>
 [프로젝트 명세](https://github.com/syoungee/wanted-pre-onboarding-challenge-fe-1-api)
 
 ## ⏳ 개발 기간
@@ -51,7 +51,7 @@ Todo list 페이지만 보려면 dummy-data.json 파일을 import해서 확인�
 - 게시글 CRUD 기능이 구현되어 있습니다.
 ```
 
-### ⭐ 페이지
+## 📔 페이지
 
 ```
 i. 메인페이지(회원 가입 or 로그인 접근 가능)
