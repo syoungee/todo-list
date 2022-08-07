@@ -31,9 +31,15 @@ const Login = (props) => {
   // register button click!
   const handleSubmit = (e) => {
     e.preventDefault();
-    login(userInfo);
-    setLogin();
-    navigate("/todo");
+    login(userInfo).then((res) => {
+      console.log(res.status, res.data.message);
+      if (res.status === 200) {
+        setLogin();
+        navigate("/todo");
+      } else {
+        console.log(res.status, res.data.message);
+      }
+    });
   };
 
   return (
