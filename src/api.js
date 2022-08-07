@@ -13,6 +13,8 @@ export const login = async (data) => {
   try {
     const response = await axios.post("http://localhost:8080/users/login", data);
     console.log(response); // message, token
+    window.localStorage.setItem("token", response.data.token);
+    return response;
   } catch (error) {
     console.error(error);
   }
@@ -30,6 +32,7 @@ export const signUp = async (data) => {
   try {
     const response = await axios.post("http://localhost:8080/users/create", data);
     console.log(response); // message, token
+    return response;
   } catch (error) {
     console.error(error);
   }
@@ -37,17 +40,16 @@ export const signUp = async (data) => {
 
 // TODO APIS(CRUD) - 인증이 필요합니다
 
-export const getTodos = async (authToken) => {
+export const getTodos = async () => {
+  console.log("getTodos 실행");
   const headers = {
     "Content-Type": "application/json",
-    Authorization: authToken,
+    Authorization: window.localStorage.getItem("token"),
   };
   try {
-    const response = await axios.get("localhost:8080/todos", {
-      headers: headers, // headers에 headers 객체 전달
-    });
-    console.log(response); // data
-    return response;
+    const response = await axios.get("http://localhost:8080/todos", { headers: headers });
+    console.log(response.data); // data
+    return response.data;
   } catch (error) {
     console.error(error);
   }
