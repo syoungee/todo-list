@@ -31,8 +31,9 @@ const TodoDetail = (props) => {
   return (
     <div className="app">
       <div className="task-header">
-        <div className="task-header-title">TODO{` #${location.state.index + 1}`}</div>
-        <div className="task-tools"></div>
+        <div className="task-header-title">
+          TODO{` #${location.state.index + 1}`} <button className="task-edit"></button>
+        </div>
       </div>
       {todoItem()}
     </div>
