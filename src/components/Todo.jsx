@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { getTodos } from "../api";
 import { useNavigate } from "react-router-dom";
 import "./Todo.css";
-// import todoDatas from "../dummy-data.json";
-// dummy-data 필요 시 주석 제거
 
 const Todo = () => {
   const navigate = useNavigate();
