@@ -103,6 +103,8 @@
 }
 
 .task-header-title {
+  justify-content: space-between;
+  display: flex;
   margin: 0;
   font-size: 20px;
   font-weight: 600;
@@ -118,6 +120,7 @@
 }
 
 .task-filter {
+  display: flex;
   border: 0;
   padding: 3px 8px;
   background: 0;
@@ -184,17 +187,16 @@
   display: block;
 }
 
-.task-edit{
+.task-edit {
   border: 0;
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   padding: 0;
   overflow: hidden;
   background-color: transparent;
   background-image: url("https://img.icons8.com/officexs/344/edit.png");
   background-repeat: no-repeat;
   background-size: cover;
-  cursor: pointer;
 }
 
 .task-detail {
