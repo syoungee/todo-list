@@ -1,6 +1,4 @@
 import axios from "axios";
-import { useParams } from "react-router-dom";
-
 // Auth APIS
 
 /*
@@ -41,7 +39,7 @@ export const signUp = async (data) => {
 export const getTodos = async () => {
   const headers = {
     "Content-Type": "application/json",
-    Authorization: window.localStorage.getItem("token"),
+    Authorization: localStorage.getItem("token"),
   };
   try {
     const response = await axios.get("http://localhost:8080/todos", { headers: headers });
@@ -66,7 +64,7 @@ export const getTodoById = async (id) => {
 
 export const createTodo = async (data) => {
   try {
-    const response = await axios.post("localhost:8080/todos", data);
+    const response = await axios.post("http://localhost:8080/todos", data);
     console.log(response);
   } catch (error) {
     console.error(error);
@@ -75,7 +73,15 @@ export const createTodo = async (data) => {
 
 export const updateTodo = async (data) => {
   try {
-    const response = await axios.put("localhost:8080/todos/${id}", data);
+    const headers = {
+      "Content-Type": "application/json",
+      authorization: localStorage.getItem("token"),
+    };
+    const body = {
+      title: data.title,
+      content: data.content,
+    };
+    const response = await axios.put(`http://localhost:8080/todos/${data.id}`, { body: body }, { headers: headers });
     console.log(response);
   } catch (error) {
     console.error(error);
@@ -84,7 +90,7 @@ export const updateTodo = async (data) => {
 
 export const deleteTodo = async (data) => {
   try {
-    const response = await axios.delete("localhost:8080/todos/:id", data);
+    const response = await axios.delete("http://localhost:8080/todos/:id", data);
     console.log(response);
   } catch (error) {
     console.error(error);

@@ -23,7 +23,7 @@ const TodoDetail = (props) => {
   // edit page로 넘어가는 부분 구현
   const editPage = () => {
     console.log(location.state.index, props);
-    navigate(`/todo/edit/${location.state.index}`, { state: { id:location.state.id, index: location.state.index, item: item } });
+    navigate(`/todo/edit/${location.state.index}`, { state: { id: location.state.id, index: location.state.index, item: item } });
     return;
   };
 
