@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-// import { getTodoById } from "../api";
 import { updateTodo } from "../api";
 import "./Todo.css";
 
@@ -14,6 +13,7 @@ const TodoDetailEditor = (props) => {
     setTodoInfo({ ...todoInfo, [e.target.name]: e.target.value });
   };
 
+  // TODO: status 200일 경우 useEffect로 업데이트 해주기
   const editTodo = (e) => {
     e.preventDefault();
     console.log("todoInfo :", todoInfo, id);
