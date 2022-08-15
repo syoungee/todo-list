@@ -8,6 +8,7 @@ const TodoDetail = (props) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [item, setItem] = useState(null);
+
   useEffect(() => {
     getTodoById(location.state.id).then((res) => {
       if (res.status === 200) {

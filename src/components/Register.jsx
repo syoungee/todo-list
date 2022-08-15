@@ -27,7 +27,6 @@ const Register = (props) => {
   // register button click!
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(userInfo);
     signUp(userInfo);
   };
 
