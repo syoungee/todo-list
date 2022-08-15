@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getTodos } from "../api";
+import { getTodos, deleteTodo } from "../api";
 import { useNavigate } from "react-router-dom";
 import "./Todo.css";
 
@@ -23,6 +23,19 @@ const Todo = () => {
     else e.target.parentElement.className = `task-item is-completed`;
   };
 
+  // X 버튼 클릭 시 삭제 로직
+  // TODO: 삭제 성공 뒤 페이지 refresh
+  const deleteItem = (id) => {
+    deleteTodo(id).then((res) => {
+      if (res.status === 200) {
+        console.log("todo 삭제 성공");
+      } else {
+        console.log(res.satus, res.data.message);
+        console.log("todo 삭제 실패!");
+      }
+    });
+  };
+
   const todoItems = () => {
     return items?.map((item, index) => (
       <div className={`task-item`} key={index}>
@@ -34,7 +47,13 @@ const Todo = () => {
             navigate(`/todo/${index}`, { state: { id: item.id, index: index } });
           }}
         ></button>
-        <button className="task-delete"></button>
+        <button
+          className="task-delete"
+          onClick={() => {
+            console.log("onclick!", item.id);
+            deleteItem(item.id);
+          }}
+        ></button>
       </div>
     ));
   };

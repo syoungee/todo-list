@@ -81,16 +81,20 @@ export const updateTodo = async (data) => {
       title: data.title,
       content: data.content,
     };
-    const response = await axios.put(`http://localhost:8080/todos/${data.id}`, body , { headers: headers });
+    const response = await axios.put(`http://localhost:8080/todos/${data.id}`, body, { headers: headers });
     console.log(response);
   } catch (error) {
     console.error(error);
   }
 };
 
-export const deleteTodo = async (data) => {
+export const deleteTodo = async (id) => {
   try {
-    const response = await axios.delete("http://localhost:8080/todos/:id", data);
+    const headers = {
+      "Content-Type": "application/json",
+      authorization: localStorage.getItem("token"),
+    };
+    const response = await axios.delete(`http://localhost:8080/todos/${id}`, { headers: headers });
     console.log(response);
   } catch (error) {
     console.error(error);

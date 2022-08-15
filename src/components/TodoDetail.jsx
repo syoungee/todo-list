@@ -9,6 +9,7 @@ const TodoDetail = (props) => {
   const location = useLocation();
   const [item, setItem] = useState(null);
 
+  // TODO: 로직 수정 필요
   useEffect(() => {
     getTodoById(location.state.id).then((res) => {
       if (res.status === 200) {
