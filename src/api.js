@@ -81,7 +81,7 @@ export const updateTodo = async (data) => {
       title: data.title,
       content: data.content,
     };
-    const response = await axios.put(`http://localhost:8080/todos/${data.id}`, { body: body }, { headers: headers });
+    const response = await axios.put(`http://localhost:8080/todos/${data.id}`, body , { headers: headers });
     console.log(response);
   } catch (error) {
     console.error(error);

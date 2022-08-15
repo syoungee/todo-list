@@ -31,7 +31,7 @@ const Todo = () => {
         <button
           className="task-detail"
           onClick={() => {
-            navigate(`/todo/${index}`, { state:{id: item.id, index:index} });
+            navigate(`/todo/${index}`, { state: { id: item.id, index: index } });
           }}
         ></button>
         <button className="task-delete"></button>

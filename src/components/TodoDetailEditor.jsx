@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { updateTodo } from "../api";
 import "./Todo.css";
 
 const TodoDetailEditor = (props) => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [todoInfo, setTodoInfo] = useState({ title: location.state.item.title, content: location.state.item.content });
   const data = location.state;
   const id = location.state.id;
@@ -19,8 +21,15 @@ const TodoDetailEditor = (props) => {
     console.log("todoInfo :", todoInfo, id);
     console.log({ ...todoInfo, id: id });
     const data = { ...todoInfo, id: id };
-    updateTodo(data);
-    //updateTodo({ ...todoInfo, id: id });
+    updateTodo(data).then((res) => {
+      if (res.status === 200) {
+        console.log("updated successed!");
+        navigate(`/todo/${location.state.index}`, { state: { id: location.state.id, index: location.state.index } });
+      } else {
+        console.log(res.status, res.message);
+        alert(res.message);
+      }
+    });
   };
 
   const detailItem = (data) => {
