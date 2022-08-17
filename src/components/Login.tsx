@@ -4,10 +4,15 @@ import { useNavigate } from 'react-router-dom';
 import { login } from '../api.js';
 import './Welcome.css';
 
+interface UserInfo {
+  email: string;
+  password: string;
+}
+
 const Login = (props: any) => {
   const navigate = useNavigate();
   const { isShow, handleClick } = props;
-  const [userInfo, setUserInfo] = useState<object>({ email: '' as string, password: '' as string });
+  const [userInfo, setUserInfo] = useState<UserInfo>({ email: '', password: '' });
   const [btnOn, setBtnOn] = useState<boolean>(false);
 
   // set email & password
@@ -18,7 +23,7 @@ const Login = (props: any) => {
   };
 
   // validation check - 버튼 활성화 on(컬러)/off(회색)
-  const canRegister = (userInfo: any) => {
+  const canRegister = (userInfo: UserInfo): boolean => {
     if (!userInfo.email || !userInfo.password) return false;
     // 이메일 관련 정규식
     const regEmail = /^[0-9a-zA-Z]([-_]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
@@ -30,7 +35,7 @@ const Login = (props: any) => {
   };
 
   // register button click!
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e?.preventDefault();
     login(userInfo).then((res: AxiosResponse<any, any> | undefined): void => {
       console.log(res?.status, res?.data.message);
