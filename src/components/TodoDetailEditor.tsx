@@ -6,7 +6,7 @@ import './Todo.css';
 const TodoDetailEditor = (props: any) => {
   const location: any = useLocation();
   const navigate = useNavigate();
-  const [todoInfo, setTodoInfo] = useState({ title: location.state.item.title, content: location.state.item.content });
+  const [todoInfo, setTodoInfo] = useState({ title: location.state.title, content: location.state.content });
   const data: any = location.state;
   const id = data.id;
 
@@ -16,12 +16,10 @@ const TodoDetailEditor = (props: any) => {
 
   const editTodo = (e: MouseEvent<HTMLElement>) => {
     e.preventDefault();
-    console.log('todoInfo :', todoInfo, id);
-    console.log({ ...todoInfo, id: id });
     const allToDoData = { ...todoInfo, id: id };
     updateTodo(allToDoData).then(() => {
       console.log('updated successed!');
-      navigate(`/todo/${data.index}`, { state: { id: data.id, index: data.index } });
+      navigate(`/todo/${data.index}`, { state: { id: data.id, ...todoInfo } });
     });
   };
 
@@ -30,12 +28,12 @@ const TodoDetailEditor = (props: any) => {
       <div>
         <form action="submit">
           title:
-          <input type="text" name="title" defaultValue={data?.item?.title ? data.item.title : null} onChange={onChange} required={true} />
+          <input type="text" name="title" defaultValue={data?.title ? data.title : null} onChange={onChange} required={true} />
           <br />
           content:
-          <input type="text" name="content" defaultValue={data?.item?.content ? data.item.content : null} onChange={onChange} required={true} />
+          <input type="text" name="content" defaultValue={data?.content ? data.content : null} onChange={onChange} required={true} />
           <br />
-          createdAt: {data?.item?.createdAt}
+          createdAt: {data?.createdAt}
           <br /> <br />
           <button type="submit" onClick={(e) => editTodo(e)}>
             수정하기

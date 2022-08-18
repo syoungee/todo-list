@@ -1,35 +1,18 @@
-import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { getTodoById } from '../api';
 import './Todo.css';
 
-interface Item {
-  id: number;
-  title: 'string';
-  content: 'string';
-}
-
-const TodoDetail = (props: any) => {
+const TodoDetail = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const data: any = location.state;
-  const id = data.id;
-  const [item, setItem] = useState<Array<Item> | null>(null);
-
-  getTodoById(id).then((res) => {
-    if (res?.status === 200) {
-      setItem(res.data.data);
-    } else console.log(res?.status, res?.data.message);
-  });
-
   const todoItem = () => {
-    return <div className={`task-item`}>{item ? detailItem(item) : ''}</div>;
+    console.log(location);
+    return <div className={`task-item`}>{location.state ? detailItem(location.state) : '정보 없음'}</div>;
   };
 
   // edit page로 넘어가는 부분 구현
   const editPage = () => {
-    console.log(data.index, props);
-    navigate(`/todo/edit/${data.index}`, { state: { id: data.id, index: data.index, item: item } });
+    navigate(`/todo/edit/${data.index}`, { state: location.state });
     return;
   };
 

@@ -1,6 +1,6 @@
 import { AxiosResponse } from 'axios';
 import { useEffect, useState, MouseEvent } from 'react';
-import { getTodos, deleteTodo } from '../api';
+import { getTodos, deleteTodo, getTodoById } from '../api';
 import { useNavigate } from 'react-router-dom';
 import './Todo.css';
 
@@ -31,6 +31,21 @@ const Todo = () => {
     else parentName = `task-item is-completed`;
   };
 
+  const editPageClick = (item: any, index: any) => {
+    console.log(item.id);
+    getTodoById(item.id)
+      .then((res: any) => {
+        console.log('111');
+        console.log(res);
+        return res.data;
+      })
+      .then((data) => {
+        console.log(data.data);
+        navigate(`/todo/${index}`, { state: {...data.data, index:index} });
+      });
+    return;
+  };
+
   // X 버튼 클릭 시 삭제 로직
   // TODO: 삭제 성공 뒤 페이지 refresh
   const deleteItem = (id: string | number) => {
@@ -53,16 +68,11 @@ const Todo = () => {
         <button
           className="task-detail"
           onClick={() => {
-            navigate(`/todo/${index}`, { state: { id: item.id, index: index } });
+            editPageClick(item, index);
+            //navigate(`/todo/${index}`, { state: { id: item.id, index: index } });
           }}
         ></button>
-        <button
-          className="task-delete"
-          onClick={() => {
-            console.log('onclick!', item.id);
-            deleteItem(item.id);
-          }}
-        ></button>
+        <button className="task-delete" onClick={() => deleteItem(item.id)}></button>
       </div>
     ));
   };
