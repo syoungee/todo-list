@@ -1,11 +1,10 @@
-import React from "react";
-import "./Welcome.css";
+import './Welcome.css';
 
-const Welcome = (props) => {
+const Welcome = (props: any) => {
   const { isShow, handleClick } = props;
 
   return (
-    <div className={`card border-0 shadow card--welcome ${isShow === "welcome" ? "is-show" : ""} `} id="welcome">
+    <div className={`card border-0 shadow card--welcome ${isShow === 'welcome' ? 'is-show' : ''} `} id="welcome">
       <div className="card-body">
         <h2 className="card-title">WELCOME</h2>
         <p>Welcome to the login page</p>

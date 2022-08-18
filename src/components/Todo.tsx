@@ -34,13 +34,14 @@ const Todo = () => {
   // X 버튼 클릭 시 삭제 로직
   // TODO: 삭제 성공 뒤 페이지 refresh
   const deleteItem = (id: string | number) => {
-    deleteTodo(id).then((res: any) => {
-      if (res.status === 200) {
-        console.log('todo 삭제 성공');
-      } else {
-        console.log(res.status, res.data.message);
-        console.log('todo 삭제 실패!');
-      }
+    deleteTodo(id).then(() => {
+      console.log('todo 삭제 성공');
+      // refresh
+      getTodos().then((res: AxiosResponse<any, any> | undefined): void => {
+        if (res?.status === 200) {
+          setItems(res?.data?.data);
+        } else console.log(res?.status, res?.data?.message);
+      });
     });
   };
 

@@ -22,7 +22,7 @@ const Register = (props: any) => {
   // validation check (email & password format)
   const canRegister = (userInfo: UserInfo) => {
     if (!userInfo.email || !userInfo.password) return false;
-    const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+    const regEmail = /^[0-9a-zA-Z]([-_]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
     if (regEmail.test(userInfo.email) === true && userInfo.password.length >= 8) {
       return true;
     }
