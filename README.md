@@ -70,7 +70,6 @@ iii. todo list 상세 페이지
 iv. todo 수정 페이지
 v. todo 생성 페이지
 ```
-벨로그 구경가기<br/>
-[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=syoungee&color=dark)](https://github.com/syoungee/velog-readme-stats) <br/>
-
-[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=syoungee&color=dark&slug=개발자로서의-나의-특징)](https://github.com/syoungee/velog-readme-stats)
+<b>벨로그 구경가기✨</b><br/>
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=syoungee&color=dark&slug=개발자로서의-나의-특징)](https://velog.io/@syoungee)<br/>
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/list?name=syoungee&color=dark)](https://velog.io/@syoungee) 
