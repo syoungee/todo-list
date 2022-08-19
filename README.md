@@ -53,8 +53,6 @@ Todo List에서 햄버거 메뉴 클릭 시 detail page로 이동
 프로젝트 명세 링크의 서버를 띄우고 프로그램을 실행해주세요
 ```
 
-_TODO: 폴더 구조 리팩토링, react-query적용_
-
 ## ✍🏻 프로젝트 설명
 
 ```
@@ -73,5 +71,38 @@ iv. todo 수정 페이지
 v. todo 생성 페이지
 ```
 
+## 파일 경로
+
+```
+src
+ ┣ api
+ ┃ ┗ api.js
+ ┣ components
+ ┃ ┣ Login.tsx
+ ┃ ┣ Main.tsx
+ ┃ ┣ Register.tsx
+ ┃ ┣ Todo.css
+ ┃ ┣ Todo.tsx
+ ┃ ┣ TodoAddPage.tsx
+ ┃ ┣ TodoDetail.tsx
+ ┃ ┣ TodoDetailEditor.tsx
+ ┃ ┣ Welcome.css
+ ┃ ┗ Welcome.tsx
+ ┣ App.tsx
+ ┗ index.tsx
+```
+
+## 추가적으로 필요한 구현사항
+
+```
+typescript 보완(any 없애기)
+refactoring(dir 수정 및 함수 기능 단위로 쪼개기)
+react-query 적용시키기
+redux로 상태 관리 구현해보기
+README.md 보완
+```
+
 <b>벨로그 구경가기✨</b><br/>
-[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=syoungee&color=dark&slug=개발자로서의-나의-특징)](https://velog.io/@syoungee)<br/>
+
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=syoungee&color=dark)](https://velog.io/@syoungee)
+
