@@ -32,16 +32,14 @@ const Todo = () => {
   };
 
   const editPageClick = (item: any, index: any) => {
-    console.log(item.id);
     getTodoById(item.id)
       .then((res: any) => {
-        console.log('111');
         console.log(res);
         return res.data;
       })
       .then((data) => {
         console.log(data.data);
-        navigate(`/todo/${index}`, { state: {...data.data, index:index} });
+        navigate(`/todo/${index}`, { state: { ...data.data, index: index } });
       });
     return;
   };
@@ -69,7 +67,6 @@ const Todo = () => {
           className="task-detail"
           onClick={() => {
             editPageClick(item, index);
-            //navigate(`/todo/${index}`, { state: { id: item.id, index: index } });
           }}
         ></button>
         <button className="task-delete" onClick={() => deleteItem(item.id)}></button>
@@ -85,7 +82,9 @@ const Todo = () => {
       </div>
       <div className="task-body">
         <div className="task-tools">{items?.length} tasks</div>
-        <div className="task-filter is-active">add new tasks!</div>
+        <div className="add-task task-filter is-active" onClick={() => navigate(`/todo/add`)}>
+          add new tasks!
+        </div>
       </div>
       <div className="task-list">{todoItems()}</div>
     </div>

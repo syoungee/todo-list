@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 // Auth APIS
 
 /*
@@ -10,7 +10,7 @@ import axios from "axios";
 */
 export const login = async (data) => {
   try {
-    const response = await axios.post("http://localhost:8080/users/login", data);
+    const response = await axios.post('http://localhost:8080/users/login', data);
     return response;
   } catch (error) {
     console.error(error);
@@ -25,9 +25,9 @@ export const login = async (data) => {
   password: string
 */
 export const signUp = async (data) => {
-  console.log("signUp함수 실행");
+  console.log('signUp함수 실행');
   try {
-    const response = await axios.post("http://localhost:8080/users/create", data);
+    const response = await axios.post('http://localhost:8080/users/create', data);
     return response;
   } catch (error) {
     console.error(error);
@@ -38,11 +38,11 @@ export const signUp = async (data) => {
 
 export const getTodos = async () => {
   const headers = {
-    "Content-Type": "application/json",
-    Authorization: localStorage.getItem("token"),
+    'Content-Type': 'application/json',
+    Authorization: localStorage.getItem('token'),
   };
   try {
-    const response = await axios.get("http://localhost:8080/todos", { headers: headers });
+    const response = await axios.get('http://localhost:8080/todos', { headers: headers });
     return response;
   } catch (error) {
     console.error(error);
@@ -51,8 +51,8 @@ export const getTodos = async () => {
 
 export const getTodoById = async (id) => {
   const headers = {
-    "Content-Type": "application/json",
-    authorization: localStorage.getItem("token"),
+    'Content-Type': 'application/json',
+    authorization: localStorage.getItem('token'),
   };
   try {
     const response = await axios.get(`http://localhost:8080/todos/${id}`, { headers: headers });
@@ -63,8 +63,12 @@ export const getTodoById = async (id) => {
 };
 
 export const createTodo = async (data) => {
+  const headers = {
+    'Content-Type': 'application/json',
+    authorization: localStorage.getItem('token'),
+  };
   try {
-    const response = await axios.post("http://localhost:8080/todos", data);
+    const response = await axios.post('http://localhost:8080/todos', data, { headers: headers });
     console.log(response);
   } catch (error) {
     console.error(error);
@@ -74,8 +78,8 @@ export const createTodo = async (data) => {
 export const updateTodo = async (data) => {
   try {
     const headers = {
-      "Content-Type": "application/json",
-      authorization: localStorage.getItem("token"),
+      'Content-Type': 'application/json',
+      authorization: localStorage.getItem('token'),
     };
     const body = {
       title: data.title,
@@ -91,8 +95,8 @@ export const updateTodo = async (data) => {
 export const deleteTodo = async (id) => {
   try {
     const headers = {
-      "Content-Type": "application/json",
-      authorization: localStorage.getItem("token"),
+      'Content-Type': 'application/json',
+      authorization: localStorage.getItem('token'),
     };
     const response = await axios.delete(`http://localhost:8080/todos/${id}`, { headers: headers });
     console.log(response);
