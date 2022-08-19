@@ -2,7 +2,7 @@
 
 # Todo List <br/> 프론트 페이지 구현 📓
 
-## 원티드 프론트엔드 프리온보딩 챌린지 1차
+<b> 원티드 프론트엔드 프리온보딩 챌린지 1차 </b>
 
 <p>
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white"/>
@@ -70,3 +70,7 @@ iii. todo list 상세 페이지
 iv. todo 수정 페이지
 v. todo 생성 페이지
 ```
+벨로그 구경가기<br/>
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=syoungee&color=dark)](https://github.com/syoungee/velog-readme-stats) <br/>
+
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=syoungee&color=dark&slug=개발자로서의-나의-특징)](https://github.com/syoungee/velog-readme-stats)
