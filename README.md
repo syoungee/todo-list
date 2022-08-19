@@ -72,4 +72,3 @@ v. todo 생성 페이지
 ```
 <b>벨로그 구경가기✨</b><br/>
 [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=syoungee&color=dark&slug=개발자로서의-나의-특징)](https://velog.io/@syoungee)<br/>
-[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/list?name=syoungee&color=dark)](https://velog.io/@syoungee) 
