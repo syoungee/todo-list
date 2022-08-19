@@ -2,6 +2,8 @@
 
 # Todo List <br/> 프론트 페이지 구현 📓
 
+## 원티드 프론트엔드 프리온보딩 챌린지 1차
+
 <p>
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white"/>
   <img src="https://img.shields.io/badge/Javscript-F7DF1E?style=flat&logo=Javascript&logoColor=white"/>
@@ -24,10 +26,7 @@
 
 https://user-images.githubusercontent.com/22606199/183275189-6aee57ed-daf2-43cd-b7e4-66829c32b717.mp4
 
-
-
 https://user-images.githubusercontent.com/22606199/183284987-c71a6dd7-edc3-4361-8aef-6541f7255398.mp4
-
 
 ```
 1. 회원 가입(인증), 로그인
@@ -38,20 +37,21 @@ localhost:3000/auth
 2. Todo List
 로그인 성공 시 Todo List 페이지로 이동
 localhost:3000/todo
+햄버거 메뉴와 삭제 메뉴를 클릭 시 해당 기능 동작
 
 3. Todo 상세 페이지
 Todo List에서 햄버거 메뉴 클릭 시 detail page로 이동
 뒤로 가기를 통해 빠져나올 수 있음
 
-3. 기타 사항
+4. todo 수정 페이지
+
+5. todo 생성 페이지
+
+6. 기타 사항
 프로젝트 명세 링크의 서버를 띄우고 프로그램을 실행해주세요
-Todo list 페이지만 보려면 dummy-data.json 파일을 import해서 확인해주세요
 ```
 
-
-
-*TODO: 상세 보기, 삭제 기능, 추가 기능 추가 예정*
-
+_TODO: 폴더 구조 리팩토링, react-query적용_
 
 ## ✍🏻 프로젝트 설명
 
@@ -67,4 +67,6 @@ Todo list 페이지만 보려면 dummy-data.json 파일을 import해서 확인�
 i. 메인페이지(회원 가입 or 로그인 접근 가능)
 ii. todo list 페이지
 iii. todo list 상세 페이지
+iv. todo 수정 페이지
+v. todo 생성 페이지
 ```
