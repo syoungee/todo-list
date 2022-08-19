@@ -1,6 +1,6 @@
 import { AxiosResponse } from 'axios';
 import { useEffect, useState, MouseEvent } from 'react';
-import { getTodos, deleteTodo, getTodoById } from '../api';
+import { getTodos, deleteTodo, getTodoById } from '../api/api';
 import { useNavigate } from 'react-router-dom';
 import './Todo.css';
 

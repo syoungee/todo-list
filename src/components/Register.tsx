@@ -1,6 +1,6 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
 import './Welcome.css';
-import { signUp } from '../api.js';
+import { signUp } from '../api/api.js';
 
 interface UserInfo {
   email: string;
