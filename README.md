@@ -5,9 +5,11 @@
 <b> 원티드 프론트엔드 프리온보딩 챌린지 1차 </b>
 
 <p>
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white"/>
+  <b>tech specs</b><br/>
+  <img src="https://img.shields.io/badge/React-^18.2.0-61DAFB?style=flat&logo=React&logoColor=white"/> <img src="https://img.shields.io/badge/typescript-^4.7.4-3178c6?style=flat&logo=typescript&logoColor=white"/><br/>
   <img src="https://img.shields.io/badge/Javscript-F7DF1E?style=flat&logo=Javascript&logoColor=white"/>
   <img src="https://img.shields.io/badge/CSS-DD3A0A?style=flat&logo=CSS3&logoColor=white"/>
+  
 </p>
 
 </div>
@@ -70,5 +72,6 @@ iii. todo list 상세 페이지
 iv. todo 수정 페이지
 v. todo 생성 페이지
 ```
+
 <b>벨로그 구경가기✨</b><br/>
 [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=syoungee&color=dark&slug=개발자로서의-나의-특징)](https://velog.io/@syoungee)<br/>
