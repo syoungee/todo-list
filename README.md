@@ -109,11 +109,11 @@ npm install && npm start
 ## 추가적으로 필요한 구현사항
 
 ```
-typescript 보완(any 없애기)
-refactoring(dir 수정 및 함수 기능 단위로 쪼개기 - 관심사 분리)
-react-query 적용시키기
-redux로 상태 관리 구현해보기
-README.md 보완
+1. typescript 보완(any 없애기)
+2. refactoring(dir 수정 및 함수 기능 단위로 쪼개기 - 관심사 분리)
+3. react-query 적용시키기
+4. redux로 상태 관리 구현해보기
+5. README.md 보완
 ```
 
 ## 회고
