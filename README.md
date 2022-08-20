@@ -5,10 +5,12 @@
 <b> 원티드 프론트엔드 프리온보딩 챌린지 1차 </b>
 
 <p>
-  <img src="https://img.shields.io/badge/React-^18.2.0-61DAFB?style=flat&logo=React&logoColor=white"/> <img src="https://img.shields.io/badge/typescript-^4.7.4-3178c6?style=flat&logo=typescript&logoColor=white"/><br/>
+  <img src="https://img.shields.io/badge/React-^18.2.0-61DAFB?style=flat&logo=React&logoColor=white"/> 
+  <img src="https://img.shields.io/badge/typescript-^4.7.4-3178c6?style=flat&logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/node-v18.4.0-black?style=flat&logo=node&logoColor=white"/>
+  <br/>
   <img src="https://img.shields.io/badge/Javscript-F7DF1E?style=flat&logo=Javascript&logoColor=white"/>
   <img src="https://img.shields.io/badge/CSS-DD3A0A?style=flat&logo=CSS3&logoColor=white"/>
-  
 </p>
 
 </div>
@@ -31,6 +33,7 @@ https://user-images.githubusercontent.com/22606199/183284987-c71a6dd7-edc3-4361-
 
 https://user-images.githubusercontent.com/22606199/185723708-b5b42fd5-0454-4bb9-b1f1-3777e7f064fd.mov
 
+## 구현 기능
 
 ```
 1. 회원 가입(인증), 로그인
@@ -94,11 +97,20 @@ src
  ┗ index.tsx
 ```
 
+## 실행 방법
+
+[server](https://github.com/syoungee/wanted-pre-onboarding-challenge-fe-1-api)<br/>
+서버와 클라이언트 모두 아래의 명령어로 실행<br/>
+localhost환경에서 서버는 port번호 8080, 클라이언트는 port번호 3000을 사용<br/>
+```
+npm install && npm start
+```
+
 ## 추가적으로 필요한 구현사항
 
 ```
 typescript 보완(any 없애기)
-refactoring(dir 수정 및 함수 기능 단위로 쪼개기)
+refactoring(dir 수정 및 함수 기능 단위로 쪼개기 - 관심사 분리)
 react-query 적용시키기
 redux로 상태 관리 구현해보기
 README.md 보완
