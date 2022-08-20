@@ -5,7 +5,6 @@
 <b> 원티드 프론트엔드 프리온보딩 챌린지 1차 </b>
 
 <p>
-  <b>tech specs</b><br/>
   <img src="https://img.shields.io/badge/React-^18.2.0-61DAFB?style=flat&logo=React&logoColor=white"/> <img src="https://img.shields.io/badge/typescript-^4.7.4-3178c6?style=flat&logo=typescript&logoColor=white"/><br/>
   <img src="https://img.shields.io/badge/Javscript-F7DF1E?style=flat&logo=Javascript&logoColor=white"/>
   <img src="https://img.shields.io/badge/CSS-DD3A0A?style=flat&logo=CSS3&logoColor=white"/>
