@@ -30,6 +30,9 @@ https://user-images.githubusercontent.com/22606199/183275189-6aee57ed-daf2-43cd-
 
 https://user-images.githubusercontent.com/22606199/183284987-c71a6dd7-edc3-4361-8aef-6541f7255398.mp4
 
+https://user-images.githubusercontent.com/22606199/185723708-b5b42fd5-0454-4bb9-b1f1-3777e7f064fd.mov
+
+
 ```
 1. 회원 가입(인증), 로그인
 아래의 링크에서 회원 가입 후 token을 부여받아 로그인 가능
