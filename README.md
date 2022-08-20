@@ -116,7 +116,14 @@ redux로 상태 관리 구현해보기
 README.md 보완
 ```
 
-<b>벨로그 구경가기✨</b><br/>
+## 회고
+회사 생활을 하면서 리팩토링은 유니콘과 비슷한 존재라고 생각했는데 이번 챌린지를 통해 이 또한 노력으로 극복할 수 있고 실력이라고 느꼈습니다.<br/>
+클린 코드에 대한 고민 없이 일을 해왔던 지난 날들이 너무 아쉽습니다.<br/>
+**일잘러의 길은 기록만이 살 길이다**라는 교훈을 얻게 된 2주였습니다🫶🏻<br/>
+챌린지는 20일에 마무리 되지만 지속해서 업데이트해 나갈 예정입니다.<br/>
+
+
+## 벨로그 구경가기✨
 
 [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=syoungee&color=dark)](https://velog.io/@syoungee)
 
