@@ -1,6 +1,6 @@
 import { useState, ChangeEvent, MouseEvent } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { updateTodo } from '../api/api';
+import { updateTodo } from '../../api/todos';
 import './Todo.css';
 
 const TodoDetailEditor = (props: any) => {

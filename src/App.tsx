@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Main from './components/Main';
-import Todo from './components/Todo';
-import TodoDetail from './components/TodoDetail';
-import TodoDetailEditor from './components/TodoDetailEditor';
-import TodoAddPage from './components/TodoAddPage';
+import Main from './components/pages/Main';
+import Todo from './components/pages/Todo';
+import TodoDetail from './components/pages/TodoDetail';
+import TodoDetailEditor from './components/pages/TodoDetailEditor';
+import TodoAddPage from './components/pages/TodoAddPage';
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import { useState, ChangeEvent, MouseEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { createTodo } from '../api/api';
+import { createTodo } from '../../api/todos';
 import './Todo.css';
 
 const TodoAddPage = () => {

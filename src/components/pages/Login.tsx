@@ -1,7 +1,7 @@
 import { AxiosResponse } from 'axios';
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { login } from '../api/api.js';
+import { login } from '../../api/login';
 import './Welcome.css';
 
 interface UserInfo {

@@ -1,6 +1,6 @@
 import { AxiosResponse } from 'axios';
 import { useEffect, useState, MouseEvent } from 'react';
-import { getTodos, deleteTodo, getTodoById } from '../api/api';
+import { getTodos, deleteTodo, getTodoById } from '../../api/todos';
 import { useNavigate } from 'react-router-dom';
 import './Todo.css';
 
@@ -45,7 +45,6 @@ const Todo = () => {
   };
 
   // X 버튼 클릭 시 삭제 로직
-  // TODO: 삭제 성공 뒤 페이지 refresh
   const deleteItem = (id: string | number) => {
     deleteTodo(id).then(() => {
       console.log('todo 삭제 성공');

@@ -1,40 +1,4 @@
 import axios from 'axios';
-// Auth APIS
-
-/*
-  login
-  POST /users/login
-  Parameter
-  email: string
-  password: string
-*/
-export const login = async (data) => {
-  try {
-    const response = await axios.post('http://localhost:8080/users/login', data);
-    return response;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-/*
-  signUp
-  POST /users/create
-  Parameter
-  email: string
-  password: string
-*/
-export const signUp = async (data) => {
-  console.log('signUp함수 실행');
-  try {
-    const response = await axios.post('http://localhost:8080/users/create', data);
-    return response;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-// TODO APIS(CRUD) - 인증 필요
 
 export const getTodos = async () => {
   const headers = {
@@ -42,7 +6,7 @@ export const getTodos = async () => {
     Authorization: localStorage.getItem('token'),
   };
   try {
-    const response = await axios.get('http://localhost:8080/todos', { headers: headers });
+    const response = await axios.get(process.env.REACT_APP_API_URL + ':' + process.env.REACT_APP_PORT + '/todos', { headers: headers });
     return response;
   } catch (error) {
     console.error(error);
@@ -55,7 +19,7 @@ export const getTodoById = async (id) => {
     authorization: localStorage.getItem('token'),
   };
   try {
-    const response = await axios.get(`http://localhost:8080/todos/${id}`, { headers: headers });
+    const response = await axios.get(process.env.REACT_APP_API_URL + ':' + process.env.REACT_APP_PORT + `/todos/${id}`, { headers: headers });
     return response;
   } catch (error) {
     console.error(error);
@@ -68,7 +32,7 @@ export const createTodo = async (data) => {
     authorization: localStorage.getItem('token'),
   };
   try {
-    const response = await axios.post('http://localhost:8080/todos', data, { headers: headers });
+    const response = await axios.post(process.env.REACT_APP_API_URL + ':' + process.env.REACT_APP_PORT + '/todos', data, { headers: headers });
     console.log(response);
   } catch (error) {
     console.error(error);
@@ -85,7 +49,7 @@ export const updateTodo = async (data) => {
       title: data.title,
       content: data.content,
     };
-    const response = await axios.put(`http://localhost:8080/todos/${data.id}`, body, { headers: headers });
+    const response = await axios.put(process.env.REACT_APP_API_URL + ':' + process.env.REACT_APP_PORT + `/todos/${data.id}`, body, { headers: headers });
     console.log(response);
   } catch (error) {
     console.error(error);
@@ -98,7 +62,7 @@ export const deleteTodo = async (id) => {
       'Content-Type': 'application/json',
       authorization: localStorage.getItem('token'),
     };
-    const response = await axios.delete(`http://localhost:8080/todos/${id}`, { headers: headers });
+    const response = await axios.delete(process.env.APP_API_URL + `/todos/${id}`, { headers: headers });
     console.log(response);
   } catch (error) {
     console.error(error);
